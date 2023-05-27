@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { PutIncrementById } from '../../services/PutIncrementById';
 import { PutDecrementById } from '../../services/PutDecrementById';
-import Logo from '../../images/Logo.png';
-import picture from '../../images/picture.png';
+
 import {
   TweetContainer,
   WrapImg,
@@ -68,8 +67,8 @@ export const UserListItem = ({
     <>
       <TweetContainer>
         <WrapImg>
-          <ImgLogo src={Logo} alt="logo" />
-          <Img src={picture} alt="tweet" />
+          <ImgLogo src="#" alt="logo" />
+          <Img src="#" alt="tweet" />
         </WrapImg>
         <Line />
         <ImgUser src={avatar} alt="avatar" />

@@ -11,11 +11,11 @@ export const Container = styled.div`
 
 export const NavList = styled.nav`
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 30px;
 
   @media (min-width: 768px) {
-    gap: 50px;
+    gap: 100px;
   }
 `;
 

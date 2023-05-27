@@ -1,7 +1,7 @@
 import { Tweets } from '../components/tweets/Tweets';
 
-const TweetsPage = () => {
+const ShoppingCartPage = () => {
   return <Tweets />;
 };
 
-export default TweetsPage;
+export default ShoppingCartPage;

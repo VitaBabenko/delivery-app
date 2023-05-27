@@ -7,8 +7,8 @@ export const Layout = () => {
   return (
     <Container>
       <NavList>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/tweets">Tweets</NavLink>
+        <NavLink to="/">Shop</NavLink>
+        <NavLink to="/cart">Shopping Cart</NavLink>
       </NavList>
       <Wrapper>
         <Suspense fallback={<Loader />}>
