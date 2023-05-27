@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdelivery_app=self.webpackChunkdelivery_app||[]).push([[97],{97:function(n,e,r){r.r(e),r.d(e,{default:function(){return i}});var t,u=r(168),c=r(562).ZP.h1(t||(t=(0,u.Z)(["\n  color: #471ca9;\n  text-transform: uppercase;\n  text-align: center;\n  margin-top: 50px;\n"]))),a=r(184),p=function(){return(0,a.jsx)(c,{children:"Hello!"})},i=function(){return(0,a.jsx)(p,{})}}}]);
+//# sourceMappingURL=97.51d57f35.chunk.js.map
