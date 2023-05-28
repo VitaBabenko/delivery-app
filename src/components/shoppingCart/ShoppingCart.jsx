@@ -37,7 +37,6 @@ export const ShoppingCart = ({
         </ul>
       </section>
       <div>
-        {goodsToCart === [] && <h2>add to cart</h2>}
         <h3>Total price: {total}</h3>
         <button type="submit">Submit</button>
       </div>
