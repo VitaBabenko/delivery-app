@@ -1,11 +1,18 @@
 import { Outlet } from 'react-router-dom';
-import { Wrapper, Section, List, ListItem, NavLink } from './Shops.styled';
+import {
+  Wrapper,
+  Section,
+  Title,
+  List,
+  ListItem,
+  NavLink,
+} from './Shops.styled';
 
 export const Shops = () => {
   return (
     <Wrapper>
       <Section>
-        <h2>Shops:</h2>
+        <Title>Shops:</Title>
         <List>
           <ListItem>
             <NavLink to="mcdonny"> Mc Donny</NavLink>
