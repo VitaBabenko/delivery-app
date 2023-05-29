@@ -1,19 +1,24 @@
 {
   "files": {
     "main.css": "/delivery-app/static/css/main.c3d5249d.css",
-    "main.js": "/delivery-app/static/js/main.42673a30.js",
-    "static/js/94.7bc8649a.chunk.js": "/delivery-app/static/js/94.7bc8649a.chunk.js",
-    "static/js/153.4f3948fe.chunk.js": "/delivery-app/static/js/153.4f3948fe.chunk.js",
-    "static/js/134.c9fbd247.chunk.js": "/delivery-app/static/js/134.c9fbd247.chunk.js",
+    "main.js": "/delivery-app/static/js/main.827220e7.js",
+    "static/js/94.e8aa53ee.chunk.js": "/delivery-app/static/js/94.e8aa53ee.chunk.js",
+    "static/js/129.5eec0f05.chunk.js": "/delivery-app/static/js/129.5eec0f05.chunk.js",
+    "static/js/460.8f31d342.chunk.js": "/delivery-app/static/js/460.8f31d342.chunk.js",
+    "static/media/burger.jpg": "/delivery-app/static/media/burger.c20841c6772aacfe91df.jpg",
+    "static/media/pizza.jpg": "/delivery-app/static/media/pizza.a6153cf54e3becef8a5b.jpg",
+    "static/media/cola.jpg": "/delivery-app/static/media/cola.6a2d85eba4a73ea20688.jpg",
+    "static/media/icecream.jpg": "/delivery-app/static/media/icecream.d26a9bd3dc62396d1e84.jpg",
+    "static/media/frenchfries.jpg": "/delivery-app/static/media/frenchfries.bdd5cde8875db1dfc93d.jpg",
     "index.html": "/delivery-app/index.html",
     "main.c3d5249d.css.map": "/delivery-app/static/css/main.c3d5249d.css.map",
-    "main.42673a30.js.map": "/delivery-app/static/js/main.42673a30.js.map",
-    "94.7bc8649a.chunk.js.map": "/delivery-app/static/js/94.7bc8649a.chunk.js.map",
-    "153.4f3948fe.chunk.js.map": "/delivery-app/static/js/153.4f3948fe.chunk.js.map",
-    "134.c9fbd247.chunk.js.map": "/delivery-app/static/js/134.c9fbd247.chunk.js.map"
+    "main.827220e7.js.map": "/delivery-app/static/js/main.827220e7.js.map",
+    "94.e8aa53ee.chunk.js.map": "/delivery-app/static/js/94.e8aa53ee.chunk.js.map",
+    "129.5eec0f05.chunk.js.map": "/delivery-app/static/js/129.5eec0f05.chunk.js.map",
+    "460.8f31d342.chunk.js.map": "/delivery-app/static/js/460.8f31d342.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.42673a30.js"
+    "static/js/main.827220e7.js"
   ]
 }
