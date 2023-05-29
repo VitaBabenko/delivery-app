@@ -5,7 +5,6 @@ export const goods = [
     price: 100,
     count: 1,
     totalPrice: 100,
-    inCart: false,
   },
   {
     id: '2',
@@ -13,7 +12,6 @@ export const goods = [
     price: 80,
     count: 1,
     totalPrice: 80,
-    inCart: false,
   },
   {
     id: '3',
@@ -21,7 +19,6 @@ export const goods = [
     price: 90,
     count: 1,
     totalPrice: 90,
-    inCart: false,
   },
   {
     id: '4',
@@ -29,7 +26,6 @@ export const goods = [
     price: 75,
     count: 1,
     totalPrice: 75,
-    inCart: false,
   },
   {
     id: '5',
@@ -37,7 +33,6 @@ export const goods = [
     price: 65,
     count: 1,
     totalPrice: 65,
-    inCart: false,
   },
   {
     id: '6',
@@ -45,7 +40,6 @@ export const goods = [
     price: 25,
     count: 1,
     totalPrice: 25,
-    inCart: false,
   },
   {
     id: '7',
@@ -53,7 +47,6 @@ export const goods = [
     price: 95,
     count: 1,
     totalPrice: 95,
-    inCart: false,
   },
 ];
 
