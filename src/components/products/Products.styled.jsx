@@ -33,6 +33,7 @@ export const ListItem = styled.li`
 
 export const Img = styled.img`
   width: 200px;
+  border-radius: 15px;
 
   @media (min-width: 1200px) {
     width: 250px;

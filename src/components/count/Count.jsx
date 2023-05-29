@@ -1,4 +1,5 @@
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
+import { WrapCount, Input, WrapArrows, Btn } from './Count.styled';
 
 export const Count = ({
   count,
@@ -8,22 +9,22 @@ export const Count = ({
   changeValue,
 }) => {
   return (
-    <div>
-      <input
+    <WrapCount>
+      <Input
         type="number"
         min="1"
         max="50"
         value={count}
         onChange={evt => changeValue(id, evt.target.value)}
       />
-      <div>
-        <button type="button" onClick={() => incrementCount(id)}>
+      <WrapArrows>
+        <Btn type="button" onClick={() => incrementCount(id)}>
           <AiFillCaretUp />
-        </button>
-        <button type="button" onClick={() => decrementCount(id)}>
+        </Btn>
+        <Btn type="button" onClick={() => decrementCount(id)}>
           <AiFillCaretDown />
-        </button>
-      </div>
-    </div>
+        </Btn>
+      </WrapArrows>
+    </WrapCount>
   );
 };

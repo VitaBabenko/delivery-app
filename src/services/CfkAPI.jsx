@@ -1,0 +1,68 @@
+import pizza from '../images/pizza.jpg';
+
+export const goods = [
+  {
+    id: 'b123c',
+    name: 'Big Big Pizza',
+    photo: pizza,
+    price: 100,
+    count: 1,
+    totalPrice: 100,
+  },
+  {
+    id: 'b234c',
+    name: 'Big Big Pizza',
+    photo: pizza,
+    price: 80,
+    count: 1,
+    totalPrice: 80,
+  },
+  {
+    id: 'b345c',
+    name: 'Big Big Pizza',
+    photo: pizza,
+    price: 90,
+    count: 1,
+    totalPrice: 90,
+  },
+  {
+    id: 'b456c',
+    name: 'Big Big Pizza',
+    photo: pizza,
+    price: 75,
+    count: 1,
+    totalPrice: 75,
+  },
+  {
+    id: 'b567c',
+    name: 'Big Big Pizza',
+    photo: pizza,
+    price: 65,
+    count: 1,
+    totalPrice: 65,
+  },
+  {
+    id: 'b6c78',
+    name: 'Big Big Pizza',
+    photo: pizza,
+    price: 25,
+    count: 1,
+    totalPrice: 25,
+  },
+  {
+    id: 'b789c',
+    name: 'Big Big Pizza',
+    photo: pizza,
+    price: 95,
+    count: 1,
+    totalPrice: 95,
+  },
+  {
+    id: 'b890c',
+    name: 'Big Big Pizza',
+    photo: pizza,
+    price: 95,
+    count: 1,
+    totalPrice: 95,
+  },
+];

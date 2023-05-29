@@ -15,19 +15,19 @@ export const Shops = () => {
         <Title>Shops:</Title>
         <List>
           <ListItem>
-            <NavLink to="mcdonny"> Mc Donny</NavLink>
+            <NavLink to="mcdonny">Mc Donny</NavLink>
           </ListItem>
           <ListItem>
-            <NavLink to="cfk"> CFK</NavLink>
+            <NavLink to="cfk">CFK</NavLink>
           </ListItem>
           <ListItem>
             <NavLink to="papajyhn"> Papa Jyhn</NavLink>
           </ListItem>
           <ListItem>
-            <NavLink to="#"> Don Market</NavLink>
+            <NavLink to="donmarket"> Don Market</NavLink>
           </ListItem>
           <ListItem>
-            <NavLink to="#"> Resto Cafe</NavLink>
+            <NavLink to="restocafe"> Resto Cafe</NavLink>
           </ListItem>
         </List>
       </Section>

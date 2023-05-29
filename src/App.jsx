@@ -4,10 +4,12 @@ import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyle } from './components/GlobalStyle';
 import { Layout } from './components/layout/Layout';
-import { getGoodById } from './goodsAPI/McDonnyAPI';
-import { McDonny } from '../src/components/goods/McDonny';
-import { CFK } from '../src/components/goods/CFK';
-import { PapaJyhn } from '../src/components/goods/PapaJyhn';
+import { McDonny } from './components/products/McDonny';
+import { getProductById } from './services/AllProducts';
+import { CFK } from './components/products/CFK';
+import { PapaJyhn } from './components/products/PapaJyhn';
+import { DonMarket } from './components/products/DonMarket';
+import { RestoCafe } from './components/products/RestoCafe';
 
 const ShopPage = lazy(() => import('./pages/ShopPage'));
 const ShoppingCartPage = lazy(() => import('./pages/ShoppingCartPage'));
@@ -15,7 +17,8 @@ const ShoppingCartPage = lazy(() => import('./pages/ShoppingCartPage'));
 export const App = () => {
   const [goodsToCart, setGoodsToCart] = useState([]);
   const [total, setTotal] = useState(0);
-  console.log(goodsToCart);
+  const [order, setOrder] = useState();
+  console.log(order);
 
   useEffect(() => {
     setTotal(
@@ -24,10 +27,10 @@ export const App = () => {
   }, [goodsToCart]);
 
   const addToShoppingCart = elementId => {
-    const goodsToFind = getGoodById(elementId);
+    const goodsToFind = getProductById(elementId);
     goodsToCart.filter(product => product.id === goodsToFind.id).length &&
     goodsToCart !== []
-      ? toast.error(`${goodsToFind.name} is already in cart!`)
+      ? toast.error(`${goodsToFind.name} is already in Shopping Cart!`)
       : setGoodsToCart([...goodsToCart, { ...goodsToFind, inCart: true }]);
   };
 
@@ -84,6 +87,11 @@ export const App = () => {
     });
   };
 
+  const addOrder = newOrder => {
+    console.log('kkkk');
+    setOrder(newOrder);
+  };
+
   return (
     <>
       <Toaster toastOptions={{ duration: 3000 }} />
@@ -95,10 +103,22 @@ export const App = () => {
               path="mcdonny"
               element={<McDonny onAddToCart={addToShoppingCart} />}
             />
-            <Route path="cfk" element={<CFK />} />
-            <Route path="papajyhn" element={<PapaJyhn />} />
-            <Route />
-            <Route />
+            <Route
+              path="cfk"
+              element={<CFK onAddToCart={addToShoppingCart} />}
+            />
+            <Route
+              path="papajyhn"
+              element={<PapaJyhn onAddToCart={addToShoppingCart} />}
+            />
+            <Route
+              path="donmarket"
+              element={<DonMarket onAddToCart={addToShoppingCart} />}
+            />
+            <Route
+              path="restocafe"
+              element={<RestoCafe onAddToCart={addToShoppingCart} />}
+            />
           </Route>
           <Route
             path="cart"
@@ -110,6 +130,7 @@ export const App = () => {
                 onDecrementCount={decrementCount}
                 onChangeValue={changeValue}
                 total={total}
+                onSubmit={addOrder}
               />
             }
           />

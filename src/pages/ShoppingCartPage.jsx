@@ -1,4 +1,4 @@
-import { ShoppingCart } from '../components/shoppingCart/ShoppingCart';
+import { ShoppingCart } from '../components/shoppingCart/SoppingCart';
 
 const ShoppingCartPage = ({
   goodsToCart,
@@ -7,6 +7,7 @@ const ShoppingCartPage = ({
   onIncrementCount,
   onDecrementCount,
   onChangeValue,
+  onSubmit,
 }) => {
   return (
     <ShoppingCart
@@ -16,6 +17,7 @@ const ShoppingCartPage = ({
       onIncrementCount={onIncrementCount}
       onDecrementCount={onDecrementCount}
       onChangeValue={onChangeValue}
+      onSubmit={onSubmit}
     />
   );
 };

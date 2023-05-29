@@ -1,0 +1,68 @@
+import cola from '../images/cola.jpg';
+
+export const goods = [
+  {
+    id: 'h231p',
+    name: 'Big Big Cola',
+    photo: cola,
+    price: 100,
+    count: 1,
+    totalPrice: 100,
+  },
+  {
+    id: 'h234p',
+    name: 'Big Big Cola',
+    photo: cola,
+    price: 80,
+    count: 1,
+    totalPrice: 80,
+  },
+  {
+    id: 'h345p',
+    name: 'Big Big Cola',
+    photo: cola,
+    price: 90,
+    count: 1,
+    totalPrice: 90,
+  },
+  {
+    id: 'h456p',
+    name: 'Big Big Cola',
+    photo: cola,
+    price: 75,
+    count: 1,
+    totalPrice: 75,
+  },
+  {
+    id: 'h567p',
+    name: 'Big Big Cola',
+    photo: cola,
+    price: 65,
+    count: 1,
+    totalPrice: 65,
+  },
+  {
+    id: 'h678p',
+    name: 'Big Big Cola',
+    photo: cola,
+    price: 25,
+    count: 1,
+    totalPrice: 25,
+  },
+  {
+    id: 'h789p',
+    name: 'Big Big Cola',
+    photo: cola,
+    price: 95,
+    count: 1,
+    totalPrice: 95,
+  },
+  {
+    id: 'h890p',
+    name: 'Big Big Cola',
+    photo: cola,
+    price: 95,
+    count: 1,
+    totalPrice: 95,
+  },
+];

@@ -1,59 +1,60 @@
+import burger from '../images/burger.jpg';
+
 export const goods = [
   {
-    id: '1',
+    id: 'a123d',
     name: 'Big Big Burger',
+    photo: burger,
     price: 100,
     count: 1,
     totalPrice: 100,
   },
   {
-    id: '2',
+    id: 'a234d',
     name: 'Big Big Burger',
+    photo: burger,
     price: 80,
     count: 1,
     totalPrice: 80,
   },
   {
-    id: '3',
+    id: 'a345d',
     name: 'Big Big Burger',
+    photo: burger,
     price: 90,
     count: 1,
     totalPrice: 90,
   },
   {
-    id: '4',
+    id: 'a456d',
     name: 'Big Big Burger',
+    photo: burger,
     price: 75,
     count: 1,
     totalPrice: 75,
   },
   {
-    id: '5',
+    id: 'a567d',
     name: 'Big Big Burger',
+    photo: burger,
     price: 65,
     count: 1,
     totalPrice: 65,
   },
   {
-    id: '6',
+    id: 'a678d',
     name: 'Big Big Burger',
+    photo: burger,
     price: 25,
     count: 1,
     totalPrice: 25,
   },
   {
-    id: '7',
+    id: 'a789d',
     name: 'Big Big Burger',
+    photo: burger,
     price: 95,
     count: 1,
     totalPrice: 95,
   },
 ];
-
-export const getGoods = () => {
-  return goods;
-};
-
-export const getGoodById = elId => {
-  return goods.find(el => el.id === elId);
-};
