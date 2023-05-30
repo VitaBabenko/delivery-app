@@ -1,4 +1,7 @@
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+This is Delivery App. It consists of two pages: the shops page and the shopping
+cart page.
+
+On the first page users can choose a shop and then add goods to the cart. On the
+second page users can check all added products, remove some of them or change
+the count. And add an email, a phone number, and an address for their order and
+confirm it.

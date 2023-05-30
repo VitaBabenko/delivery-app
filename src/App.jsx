@@ -17,8 +17,6 @@ const ShoppingCartPage = lazy(() => import('./pages/ShoppingCartPage'));
 export const App = () => {
   const [goodsToCart, setGoodsToCart] = useState([]);
   const [total, setTotal] = useState(0);
-  const [order, setOrder] = useState();
-  console.log(order);
 
   useEffect(() => {
     setTotal(
@@ -87,9 +85,8 @@ export const App = () => {
     });
   };
 
-  const addOrder = newOrder => {
-    console.log('kkkk');
-    setOrder(newOrder);
+  const addOrder = () => {
+    console.log('add order');
   };
 
   return (

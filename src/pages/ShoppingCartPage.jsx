@@ -1,4 +1,4 @@
-import { ShoppingCart } from '../components/shoppingCart/SoppingCart';
+import { ShoppingCart } from '../components/shoppingCart/ShoppingCart';
 
 const ShoppingCartPage = ({
   goodsToCart,

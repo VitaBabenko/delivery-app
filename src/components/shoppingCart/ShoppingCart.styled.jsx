@@ -1,36 +1,46 @@
 import styled from 'styled-components';
 
-import { Form as FormikForm, ErrorMessage as FormikError } from 'formik';
+export const Wrapper = styled.div`
+  display: flex;
+  gap: 40px;
+`;
 
-export const Form = styled(FormikForm)`
+export const Section = styled.section`
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 800px;
   padding: 15px;
-  width: 400px;
+`;
+
+export const List = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+export const ListItem = styled.li`
+  display: flex;
+  gap: 70px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+`;
+
+export const Img = styled.img`
+  width: 250px;
+  border-radius: 15px;
 `;
 
 export const Wrap = styled.div`
-  border: 1px solid black;
-  border-radius: 20px;
-  padding: 15px;
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  gap: 50px;
-`;
-
-export const FormField = styled.label`
-  display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 300px;
-  margin-bottom: 25px;
 `;
 
-export const BtnSubmit = styled.button`
+export const Btn = styled.button`
   display: block;
-  width: 150px;
-  height: 60px;
-  font-size: 25px;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
   border-radius: 10px;
   border: 1px solid black;
   padding: 5px;
@@ -42,16 +52,4 @@ export const BtnSubmit = styled.button`
     border-color: #5cd3a8;
     color: #5cd3a8;
   }
-`;
-
-export const ErrorMessage = styled(FormikError)`
-  color: red;
-  width: 100%;
-`;
-
-export const SubmitWrap = styled.div`
-  display: flex;
-  margin-top: 30px;
-  justify-content: flex-end;
-  gap: 80px;
 `;

@@ -1,7 +1,6 @@
 import { Formik, Field } from 'formik';
 import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
-import { Cart } from '../cart/Cart';
 import {
   Form,
   Wrap,
@@ -10,9 +9,9 @@ import {
   BtnSubmit,
   ErrorMessage,
   SubmitWrap,
-} from './ShoppingCart.styled';
+} from './ContactForm.styled';
 
-const CartSchema = Yup.object().shape({
+const ContactSchema = Yup.object().shape({
   name: Yup.string()
     .required('Required')
     .matches(
@@ -29,15 +28,7 @@ const CartSchema = Yup.object().shape({
   address: Yup.string().required('Required'),
 });
 
-export const ShoppingCart = ({
-  goodsToCart,
-  total,
-  onDeleteFromShoppingCart,
-  onIncrementCount,
-  onDecrementCount,
-  onChangeValue,
-  onSubmit,
-}) => {
+export const ContactForm = ({ total, onSubmit }) => {
   return (
     <Formik
       initialValues={{
@@ -46,7 +37,7 @@ export const ShoppingCart = ({
         phone: '',
         address: '',
       }}
-      validationSchema={CartSchema}
+      validationSchema={ContactSchema}
       onSubmit={(values, actions) => {
         onSubmit({
           ...values,
@@ -79,14 +70,6 @@ export const ShoppingCart = ({
               <ErrorMessage name="address" component="span" />
             </FormField>
           </Wrap>
-          <Cart
-            goodsToCart={goodsToCart}
-            total={total}
-            onDeleteFromShoppingCart={onDeleteFromShoppingCart}
-            onIncrementCount={onIncrementCount}
-            onDecrementCount={onDecrementCount}
-            onChangeValue={onChangeValue}
-          />
         </Wrapper>
         <SubmitWrap>
           <h3>Total price: {total}</h3>

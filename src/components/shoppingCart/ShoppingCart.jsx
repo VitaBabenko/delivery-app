@@ -1,4 +1,5 @@
 import { Count } from '../count/Count';
+import { ContactForm } from '../contactForm/ContactForm';
 import {
   Wrapper,
   Section,
@@ -7,19 +8,21 @@ import {
   Img,
   Wrap,
   Btn,
-} from './Cart.styled';
+} from './ShoppingCart.styled';
 
-export const Cart = ({
+export const ShoppingCart = ({
   goodsToCart,
   total,
   onDeleteFromShoppingCart,
   onIncrementCount,
   onDecrementCount,
   onChangeValue,
+  onSubmit,
 }) => {
   return (
     <>
       <Wrapper>
+        <ContactForm total={total} onSubmit={onSubmit} />
         <Section>
           <List>
             {goodsToCart.map(el => (
