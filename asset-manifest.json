@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/delivery-app/static/css/main.c3d5249d.css",
-    "main.js": "/delivery-app/static/js/main.827220e7.js",
+    "main.js": "/delivery-app/static/js/main.190fe331.js",
     "static/js/94.e8aa53ee.chunk.js": "/delivery-app/static/js/94.e8aa53ee.chunk.js",
-    "static/js/129.5eec0f05.chunk.js": "/delivery-app/static/js/129.5eec0f05.chunk.js",
+    "static/js/316.4d8538e1.chunk.js": "/delivery-app/static/js/316.4d8538e1.chunk.js",
     "static/js/460.8f31d342.chunk.js": "/delivery-app/static/js/460.8f31d342.chunk.js",
     "static/media/burger.jpg": "/delivery-app/static/media/burger.c20841c6772aacfe91df.jpg",
     "static/media/pizza.jpg": "/delivery-app/static/media/pizza.a6153cf54e3becef8a5b.jpg",
@@ -12,13 +12,13 @@
     "static/media/frenchfries.jpg": "/delivery-app/static/media/frenchfries.bdd5cde8875db1dfc93d.jpg",
     "index.html": "/delivery-app/index.html",
     "main.c3d5249d.css.map": "/delivery-app/static/css/main.c3d5249d.css.map",
-    "main.827220e7.js.map": "/delivery-app/static/js/main.827220e7.js.map",
+    "main.190fe331.js.map": "/delivery-app/static/js/main.190fe331.js.map",
     "94.e8aa53ee.chunk.js.map": "/delivery-app/static/js/94.e8aa53ee.chunk.js.map",
-    "129.5eec0f05.chunk.js.map": "/delivery-app/static/js/129.5eec0f05.chunk.js.map",
+    "316.4d8538e1.chunk.js.map": "/delivery-app/static/js/316.4d8538e1.chunk.js.map",
     "460.8f31d342.chunk.js.map": "/delivery-app/static/js/460.8f31d342.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.827220e7.js"
+    "static/js/main.190fe331.js"
   ]
 }
