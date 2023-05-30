@@ -18,7 +18,7 @@ const ContactSchema = Yup.object().shape({
       /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/,
       'Name may contain only letters, apostrophe, dash and spaces!'
     ),
-  email: Yup.string().email().required('Required'),
+  email: Yup.string().email('Invalid email address').required('Required'),
   phone: Yup.string()
     .required('Required')
     .matches(
@@ -56,13 +56,13 @@ export const ContactForm = ({ total, onSubmit }) => {
             </FormField>
             <FormField>
               Email
-              <Field name="email" type="text" />
+              <Field name="email" type="email" />
               <ErrorMessage name="email" component="span" />
             </FormField>
             <FormField>
               Phone
-              <Field name="number" type="tel" />
-              <ErrorMessage name="number" component="span" />
+              <Field name="phone" type="phone" />
+              <ErrorMessage name="phone" component="span" />
             </FormField>
             <FormField>
               Address

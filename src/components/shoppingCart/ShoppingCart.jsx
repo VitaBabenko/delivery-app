@@ -24,30 +24,34 @@ export const ShoppingCart = ({
       <Wrapper>
         <ContactForm total={total} onSubmit={onSubmit} />
         <Section>
-          <List>
-            {goodsToCart.map(el => (
-              <ListItem key={el.id}>
-                <Img src={el.photo} alt="" />
-                <Wrap>
-                  <h3>{el.name}</h3>
-                  <p>Price: {el.totalPrice}</p>
-                  <Count
-                    count={el.count}
-                    incrementCount={onIncrementCount}
-                    decrementCount={onDecrementCount}
-                    id={el.id}
-                    changeValue={onChangeValue}
-                  />
-                </Wrap>
-                <Btn
-                  type="button"
-                  onClick={() => onDeleteFromShoppingCart(el.id)}
-                >
-                  delete from Cart
-                </Btn>
-              </ListItem>
-            ))}
-          </List>
+          {goodsToCart.length === 0 ? (
+            <h2>Please, add goods to your cart!</h2>
+          ) : (
+            <List>
+              {goodsToCart.map(el => (
+                <ListItem key={el.id}>
+                  <Img src={el.photo} alt="" />
+                  <Wrap>
+                    <h3>{el.name}</h3>
+                    <p>Price: {el.totalPrice}</p>
+                    <Count
+                      count={el.count}
+                      incrementCount={onIncrementCount}
+                      decrementCount={onDecrementCount}
+                      id={el.id}
+                      changeValue={onChangeValue}
+                    />
+                  </Wrap>
+                  <Btn
+                    type="button"
+                    onClick={() => onDeleteFromShoppingCart(el.id)}
+                  >
+                    delete from Cart
+                  </Btn>
+                </ListItem>
+              ))}
+            </List>
+          )}
         </Section>
       </Wrapper>
     </>

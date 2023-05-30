@@ -14,9 +14,24 @@ import { RestoCafe } from './components/products/RestoCafe';
 const ShopPage = lazy(() => import('./pages/ShopPage'));
 const ShoppingCartPage = lazy(() => import('./pages/ShoppingCartPage'));
 
+const getInitialCart = () => {
+  const savedCart = localStorage.getItem('cart');
+  if (savedCart !== null) {
+    const parsedCart = JSON.parse(savedCart);
+    return parsedCart;
+  }
+  return [];
+};
+
 export const App = () => {
-  const [goodsToCart, setGoodsToCart] = useState([]);
+  const [goodsToCart, setGoodsToCart] = useState(getInitialCart);
   const [total, setTotal] = useState(0);
+  const [orders, setOrders] = useState([]);
+  console.log(orders);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(goodsToCart));
+  }, [goodsToCart]);
 
   useEffect(() => {
     setTotal(
@@ -85,8 +100,16 @@ export const App = () => {
     });
   };
 
-  const addOrder = () => {
-    console.log('add order');
+  const addOrder = newOrder => {
+    if (goodsToCart.length === 0) {
+      return toast.error('Your cart is empty.');
+    }
+    return (
+      toast.success('Your order has been accepted.'),
+      setOrders([...orders, { ...newOrder, total }]),
+      setGoodsToCart([]),
+      setTotal(0)
+    );
   };
 
   return (

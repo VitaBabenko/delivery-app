@@ -6,8 +6,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Section = styled.section`
-  border: 1px solid black;
-  border-radius: 20px;
   width: 800px;
   padding: 15px;
 `;
