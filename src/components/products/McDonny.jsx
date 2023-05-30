@@ -1,7 +1,9 @@
-import { goods } from '../../services/McDonnyAPI';
+// import { useEffect } from 'react';
+// import { GetMcDonny } from '../../services/GetMcDonny';
+// import { goods } from '../../services/McDonnyAPI';
 import { Section, List, ListItem, Img, Title, Btn } from './Products.styled';
 
-export const McDonny = ({ onAddToCart }) => {
+export const McDonny = ({ goods, onAddToCart }) => {
   return (
     <Section>
       <List>
