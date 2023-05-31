@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/delivery-app/static/css/main.c3d5249d.css",
-    "main.js": "/delivery-app/static/js/main.eefa60aa.js",
+    "main.js": "/delivery-app/static/js/main.078b8421.js",
     "static/js/94.e8aa53ee.chunk.js": "/delivery-app/static/js/94.e8aa53ee.chunk.js",
     "static/js/316.0c194d0b.chunk.js": "/delivery-app/static/js/316.0c194d0b.chunk.js",
     "static/js/460.8f31d342.chunk.js": "/delivery-app/static/js/460.8f31d342.chunk.js",
@@ -12,13 +12,13 @@
     "static/media/frenchfries.jpg": "/delivery-app/static/media/frenchfries.bdd5cde8875db1dfc93d.jpg",
     "index.html": "/delivery-app/index.html",
     "main.c3d5249d.css.map": "/delivery-app/static/css/main.c3d5249d.css.map",
-    "main.eefa60aa.js.map": "/delivery-app/static/js/main.eefa60aa.js.map",
+    "main.078b8421.js.map": "/delivery-app/static/js/main.078b8421.js.map",
     "94.e8aa53ee.chunk.js.map": "/delivery-app/static/js/94.e8aa53ee.chunk.js.map",
     "316.0c194d0b.chunk.js.map": "/delivery-app/static/js/316.0c194d0b.chunk.js.map",
     "460.8f31d342.chunk.js.map": "/delivery-app/static/js/460.8f31d342.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.eefa60aa.js"
+    "static/js/main.078b8421.js"
   ]
 }
