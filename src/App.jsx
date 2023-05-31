@@ -10,7 +10,6 @@ import { CFK } from './components/products/CFK';
 import { PapaJyhn } from './components/products/PapaJyhn';
 import { DonMarket } from './components/products/DonMarket';
 import { RestoCafe } from './components/products/RestoCafe';
-import { GetMcDonny } from './services/GetMcDonny';
 
 const ShopPage = lazy(() => import('./pages/ShopPage'));
 const ShoppingCartPage = lazy(() => import('./pages/ShoppingCartPage'));
@@ -25,7 +24,6 @@ const getInitialCart = () => {
 };
 
 export const App = () => {
-  const [goodsMcdonny, setGoodsMcdonny] = useState([]);
   const [goodsToCart, setGoodsToCart] = useState(getInitialCart);
   const [total, setTotal] = useState(0);
   const [orders, setOrders] = useState([]);
@@ -34,12 +32,6 @@ export const App = () => {
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(goodsToCart));
   }, [goodsToCart]);
-
-  useEffect(() => {
-    GetMcDonny()
-      .then(resp => resp.json())
-      .then(json => setGoodsMcdonny(json));
-  }, []);
 
   useEffect(() => {
     setTotal(
@@ -129,9 +121,7 @@ export const App = () => {
           <Route path="/" element={<ShopPage />}>
             <Route
               path="mcdonny"
-              element={
-                <McDonny goods={goodsMcdonny} onAddToCart={addToShoppingCart} />
-              }
+              element={<McDonny onAddToCart={addToShoppingCart} />}
             />
             <Route
               path="cfk"

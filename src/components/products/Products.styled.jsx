@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  border: 1px solid black;
-  border-radius: 20px;
   padding: 20px;
 `;
 
