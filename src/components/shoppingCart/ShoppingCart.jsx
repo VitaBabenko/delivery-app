@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Count } from '../count/Count';
 import { ContactForm } from '../contactForm/ContactForm';
 import {
@@ -5,7 +6,6 @@ import {
   Section,
   List,
   ListItem,
-  Img,
   Wrap,
   Btn,
 } from './ShoppingCart.styled';
@@ -30,7 +30,6 @@ export const ShoppingCart = ({
             <List>
               {goodsToCart.map(el => (
                 <ListItem key={el.id}>
-                  <Img src={el.photo} alt="" />
                   <Wrap>
                     <h3>{el.name}</h3>
                     <p>Price: {el.totalPrice}</p>
@@ -56,4 +55,21 @@ export const ShoppingCart = ({
       </Wrapper>
     </>
   );
+};
+
+ShoppingCart.propTypes = {
+  goodsToCart: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      totalPrice: PropTypes.number.isRequired,
+      count: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+  total: PropTypes.number.isRequired,
+  onDeleteFromShoppingCart: PropTypes.func.isRequired,
+  onIncrementCount: PropTypes.func.isRequired,
+  onDecrementCount: PropTypes.func.isRequired,
+  onChangeValue: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { GetMcDonny } from '../../services/GetMcDonny';
 import { Loader } from '../Loader';
 import burger from '../../images/burger.jpg';
@@ -42,4 +43,8 @@ export const McDonny = ({ onAddToCart }) => {
       </Section>
     </>
   );
+};
+
+McDonny.propTypes = {
+  onAddToCart: PropTypes.func.isRequired,
 };

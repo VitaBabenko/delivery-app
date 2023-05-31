@@ -5,11 +5,11 @@ import { Routes, Route } from 'react-router-dom';
 import { GlobalStyle } from './components/GlobalStyle';
 import { Layout } from './components/layout/Layout';
 import { McDonny } from './components/products/McDonny';
-import { getProductById } from './services/AllProducts';
 import { CFK } from './components/products/CFK';
 import { PapaJyhn } from './components/products/PapaJyhn';
 import { DonMarket } from './components/products/DonMarket';
 import { RestoCafe } from './components/products/RestoCafe';
+import { GetAllGoods } from './services/GetAllGoods';
 
 const ShopPage = lazy(() => import('./pages/ShopPage'));
 const ShoppingCartPage = lazy(() => import('./pages/ShoppingCartPage'));
@@ -25,9 +25,9 @@ const getInitialCart = () => {
 
 export const App = () => {
   const [goodsToCart, setGoodsToCart] = useState(getInitialCart);
+  const [allGoods, setAllGoods] = useState([]);
   const [total, setTotal] = useState(0);
   const [orders, setOrders] = useState([]);
-  console.log(orders);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(goodsToCart));
@@ -39,12 +39,25 @@ export const App = () => {
     );
   }, [goodsToCart]);
 
+  useEffect(() => {
+    GetAllGoods()
+      .then(resp => resp.json())
+      .then(json => setAllGoods(json));
+  }, []);
+
   const addToShoppingCart = elementId => {
-    const goodsToFind = getProductById(elementId);
-    goodsToCart.filter(product => product.id === goodsToFind.id).length &&
-    goodsToCart !== []
-      ? toast.error(`${goodsToFind.name} is already in Shopping Cart!`)
-      : setGoodsToCart([...goodsToCart, { ...goodsToFind, inCart: true }]);
+    const productById = allGoods.find(product => product.id === elementId);
+
+    if (
+      goodsToCart.filter(el => el.id === productById.id).length &&
+      goodsToCart !== []
+    ) {
+      return toast.error(`${productById.name} is already in Shopping Cart!`);
+    }
+    return (
+      setGoodsToCart([...goodsToCart, { ...productById }]),
+      toast.success(`${productById.name} has been added to Your Shopping Cart!`)
+    );
   };
 
   const deleteFromShoppingCart = elementId => {

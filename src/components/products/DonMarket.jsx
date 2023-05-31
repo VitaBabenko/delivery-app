@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { GetDonMarket } from '../../services/GetDonMarket';
 import { Loader } from '../Loader';
 import icecream from '../../images/icecream.jpg';
@@ -42,4 +43,8 @@ export const DonMarket = ({ onAddToCart }) => {
       </Section>
     </>
   );
+};
+
+DonMarket.propTypes = {
+  onAddToCart: PropTypes.func.isRequired,
 };

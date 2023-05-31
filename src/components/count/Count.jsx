@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { AiFillCaretUp, AiFillCaretDown } from 'react-icons/ai';
 import { WrapCount, Input, WrapArrows, Btn } from './Count.styled';
 
@@ -27,4 +28,12 @@ export const Count = ({
       </WrapArrows>
     </WrapCount>
   );
+};
+
+Count.propTypes = {
+  count: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  incrementCount: PropTypes.func.isRequired,
+  decrementCount: PropTypes.func.isRequired,
+  changeValue: PropTypes.func.isRequired,
 };

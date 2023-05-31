@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { GetPapaJyhn } from '../../services/GetPapaJyhn';
 import { Loader } from '../Loader';
 import cola from '../../images/cola.jpg';
@@ -42,4 +43,8 @@ export const PapaJyhn = ({ onAddToCart }) => {
       </Section>
     </>
   );
+};
+
+PapaJyhn.propTypes = {
+  onAddToCart: PropTypes.func.isRequired,
 };

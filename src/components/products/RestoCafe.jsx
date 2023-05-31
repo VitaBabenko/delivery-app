@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { GetRestoCafe } from '../../services/GetRestoCafe';
 import { Loader } from '../Loader';
 import frenchfries from '../../images/frenchfries.jpg';
@@ -42,4 +43,8 @@ export const RestoCafe = ({ onAddToCart }) => {
       </Section>
     </>
   );
+};
+
+RestoCafe.propTypes = {
+  onAddToCart: PropTypes.func.isRequired,
 };

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { GetCfk } from '../../services/GetCfk';
 import { Loader } from '../Loader';
@@ -42,4 +43,8 @@ export const CFK = ({ onAddToCart }) => {
       </Section>
     </>
   );
+};
+
+CFK.propTypes = {
+  onAddToCart: PropTypes.func.isRequired,
 };
